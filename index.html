@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title>Polkadot node</title>
-	<link rel="shortcut icon" href="/favicon.png" />
+	<link rel="shortcut icon" href="favicon.png" />
 	<script type="module">
-import { start_client, default as init } from './pkg/polkadot_cli.js';
+		import { start_client, default as init } from './pkg/polkadot_cli.js';
 
 function log(msg) {
 	document.getElementsByTagName('body')[0].innerHTML += msg + '\n';
@@ -13,7 +14,7 @@ function log(msg) {
 
 async function start() {
 	log('Loading WASM');
-	await init('./pkg/polkadot_cli_bg.wasm');
+	await init('pkg/polkadot_cli_bg.wasm');
 	log('Successfully loaded WASM');
 	log('Fetching chain spec');
 	const chain_spec_response = await fetch("https://raw.githubusercontent.com/paritytech/polkadot/master/service/res/westend.json");
@@ -21,7 +22,7 @@ async function start() {
 
 	// Build our client.
 	log('Starting client');
-	let client = await start_client(chain_spec_text, 'info');
+	let client = await start_client(chain_spec_text, 'debug');
 	log('Client started');
 
 	client.rpcSubscribe('{"method":"chain_subscribeNewHead","params":[],"id":1,"jsonrpc":"2.0"}',
@@ -36,6 +37,8 @@ async function start() {
 
 start();
 	</script>
-  </head>
-  <body style="white-space: pre"></body>
+</head>
+
+<body style="white-space: pre"></body>
+
 </html>
