@@ -1,7 +1,7 @@
 # compiled-polkadot-browser-demo
 
 Compiled Polkadot browser demo node including js glue files.
-Snapshot at Polkadot commit [17650cefab8118468025e7101d839edcf70fe34a](https://github.com/paritytech/polkadot/commit/17650cefab8118468025e7101d839edcf70fe34a) (2020-06-30).
+Snapshot at Polkadot commit [08995278b9627c93ce564985b58643cef76badb0](https://github.com/paritytech/polkadot/commit/08995278b9627c93ce564985b58643cef76badb0) (2020-07-24).
 
 https://github.com/paritytech/polkadot/tree/master/cli/browser-demo
 
