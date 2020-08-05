@@ -18,7 +18,19 @@ This will fire up a local live server on `http://127.0.0.1:8080/`.
 
 ```sh
 cargo install wasm-pack		# If necessary
+```
 
-wasm-pack build --target web --out-dir ./browser-demo/pkg --no-typescript --release ./.. -- --no-default-features --features "browser"
+**./pkg was compiled with**
+```
+wasm-pack build --target web --out-dir ./browser-demo/pkg --release ./.. -- --no-default-features --features "browser"
+```
 
+**./nodejs was compiled with**
+```
+wasm-pack build --target nodejs --out-dir ./browser-demo/nodejs --release ./.. -- --no-default-features --features "browser"
+```
+
+**./bundler was compiled with**
+```
+wasm-pack build --target bundler --out-dir ./browser-demo/bundler --release ./.. -- --no-default-features --features "browser"
 ```
