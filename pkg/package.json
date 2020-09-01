@@ -4,7 +4,7 @@
     "Parity Technologies <admin@parity.io>"
   ],
   "description": "Polkadot Relay-chain Client Node",
-  "version": "0.8.22",
+  "version": "0.8.23",
   "files": [
     "polkadot_cli_bg.wasm",
     "polkadot_cli.js",
